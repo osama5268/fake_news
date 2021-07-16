@@ -1,0 +1,42 @@
+form {
+    min-width: 600px;
+  }
+  textarea {
+    height: 128px;
+    width: 1100px;
+    display: block;
+    margin: 10px 0;
+  }
+  select {
+    margin: 5px;
+  }
+  select:active,
+  select:hover {
+    outline-color: red;
+  }
+  button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: #0275d8;
+    margin: 20px 0;
+  }
+  #advanced {
+    max-width: 200px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: #0275d8;
+    margin: 20px 0px;
+  }
+  #advanced:hover{
+      background-color: red;
+      cursor: pointer;
+  }
+  
+  #advancedoptions {
+    display: none;
+  }
+  button:hover{
+    cursor: pointer;
+  }

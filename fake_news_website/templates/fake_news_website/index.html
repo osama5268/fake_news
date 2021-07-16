@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}<link rel="stylesheet" href="{% static "fake_news_website/index.css" %}">{% endblock css %}
+{% block title %}<title>Fake News Detector</title>{% endblock title %}
+{% block content %}
+            <form method="post" action="{% url "result-page"%}">
+            {% csrf_token %} 
+                <textarea name="news" id="news" cols="60" rows="5" Prequired maxlength="150"
+                    placeholder="Enter news here"></textarea>
+                <input type="radio" id="text" name="type" value="text" checked>
+                <label for="text">Text</label>
+                <input type="radio" id="link" name="type" value="link">
+                <label for="link">Link</label><br>
+                <div id="advanced" onclick="toggle();">Advanced Options</div>
+                <div id="advancedoptions">
+                    <div>
+                        <label for="documents_count">Search Intensity (Number of candidate documents to be used)
+                            :</label>
+                        <select name="documents_count" id="documents_count">
+                            <option value="5">Small: ~5 documents </option>
+                            <option value="10">Medium: ~10 documents </option>
+                            <option value="20">Heavy : ~20 documents </option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="sentence_similarity_percentage">Minimum Percentage of sentences to match for
+                            document to be similar :</label>
+                        <select name="sentence_similarity_percentage" id="sentence_similarity_percentage">
+                            <option value="100">100</option>
+                            <option value="75">75</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="match_condition">Matching Condition :</label>
+                        <select name="match_condition" id="match_condition">
+                            <option value="nearest">Nearest Match (Single Document)</option>
+                            <option value="averaged">Averaged Match (Multiple document)</option>
+                        </select>
+                    </div>
+                </div>
+                <button>Check</button>
+            </form>
+{% endblock content %}
+{% block script %}
+            let i = 0;
+            function toggle() {
+            if (i % 2 === 0) {
+                document.getElementById("advancedoptions").style.display = "block";
+            }
+            else {
+                document.getElementById("advancedoptions").style.display = "none";
+            }
+            i++;
+            if (i == 10)
+                i = 0;
+            }
+{% endblock script %}

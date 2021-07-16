@@ -1,0 +1,145 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html {
+  height: 100%;
+}
+body {
+  font-family: Georgia, Roboto, sans-serif;
+  height: 100%;
+  line-height: 1;
+}
+/* css reset ends */
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content {
+  flex: 1 0 auto;
+}
+h1 {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: monospace;
+  color: white;
+  font-weight: 100;
+  font-size: 60px;
+  letter-spacing: 10px;
+  background-color: #1d3557;
+  line-height: 80px;
+  margin-bottom: 50px;
+  padding: 60px 0;
+}
+
+
+footer {
+  min-height: 100px;
+  justify-self: flex-end;
+  min-width: 100%;
+  background-color: #264653;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+footer > div {
+  text-transform: uppercase;
+  text-decoration: none;
+  justify-self: flex-end;
+  color:white;
+}
+
+div > a > img {
+  /* size: 0.25rem; */
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}

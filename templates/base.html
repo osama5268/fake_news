@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    {% comment %} <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> {% endcomment %}
+
+    <link rel="stylesheet" href="{%static "style.css"%}"> 
+    {% block css %}{% endblock css %}
+    {% block title %}{% endblock title %}
+</head>
+
+<body>
+    <div class="container">
+        <h1>Fake News Detector</h1>
+        <div class="content">
+            {% block content %}{% endblock content %}
+        </div>
+        <footer>
+            <div><a href="https://code.swecha.org/webext/fakenewsdetector" target="_blank"><img src="{% static "gitlab.png" %}"
+                        alt="gitlab-icon"></a></div>
+            <div><a id ="about"href="{% url "about-page" %}">About</a></div>
+        </footer>
+    </div>
+
+    <script>
+    {% block script %}{% endblock script %}
+    </script>
+</body>
+
+</html>
